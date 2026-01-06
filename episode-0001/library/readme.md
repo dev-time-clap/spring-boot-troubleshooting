@@ -8,6 +8,12 @@ In diesem Video zeige ich dir wie du ganz einfach den Mockito Agent in deiner ID
 
 Konkret zeige ich dir wie du folgende Fehlermeldung beheben kannst:
 
+<div style="color:red; font-family: 'Courier New', monospace; text-align:left;">
+Erste Zeile<br>
+Zweite Zeile<br>
+Dritte Zeile
+</div>
+
 $${\color{red}
 \begin{array}{l}
 \texttt{Mockito is currently self-attaching to enable the inline-mock-maker.}\\
