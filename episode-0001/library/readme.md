@@ -8,14 +8,8 @@ In diesem Video zeige ich dir wie du ganz einfach den Mockito Agent in deiner ID
 
 Konkret zeige ich dir wie du folgende Fehlermeldung beheben kannst:
 
-<div style="color:red; font-family: 'Courier New', monospace; text-align:left;">
-Erste Zeile<br>
-Zweite Zeile<br>
-Dritte Zeile
-</div>
-
 $${\color{red}
-\begin{array}{l}
+\begin{aligned}
 \texttt{Mockito is currently self-attaching to enable the inline-mock-maker.}\\
 \texttt{This will no longer work in future releases of the JDK.}\\
 \texttt{Please add Mockito as an agent to your build as described in Mockito's documentation:}\\
@@ -24,7 +18,7 @@ $${\color{red}
 \texttt{WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information}\\
 \texttt{WARNING: Dynamic loading of agents will be disallowed by default in a future release}\\
 \texttt{OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended}
-\end{array}
+\end{aligned}
 }$$
 
 Hier geht es zum YouTube-Video: [https://youtu.be/mPo2QbCjg7k](https://youtu.be/mPo2QbCjg7k)
