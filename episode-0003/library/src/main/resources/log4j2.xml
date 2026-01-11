@@ -5,104 +5,16 @@
       <!-- https://stackoverflow.com/questions/34446722/is-it-possible-for-using-different-pattern-layout-for-different-log-level-and-ou -->
       <PatternLayout pattern="%d %5p [%10.10t] %-83.80style{%c{1.}.%M(%L)} %3tid | %m%n" />
     </Console>
-    <RollingFile name="Rolling" fileName="/var/log/dev-time-app/application.log" filePattern="/var/log/dev-time-app/application-%i.log">
-      <PatternLayout pattern="%d %5p [%10.10t] %-83.80style{%c{1.}.%M(%L)} %3tid | %m%n" />
-      <Policies>
-        <OnStartupTriggeringPolicy />
-        <SizeBasedTriggeringPolicy size="10MB" />
-      </Policies>
-      <DefaultRolloverStrategy max="10" />
-    </RollingFile>
   </Appenders>
   <Loggers>
   
     <!-- dev|time logging configuration (Default: INFO) -->
     <Logger name="de.devtime" level="INFO" additivity="false">
       <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
     </Logger>   
-
-    <!-- Spring-Framework logging configuration (Default: WARN) -->
-    <Logger name="org.springframework" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.springframework.orm.jpa" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    
-    <!-- JLine logging configuration (Default: ERROR) -->
-    <Logger name="org.jline" level="ERROR" additivity="false">
-      <AppenderRef ref="Console" />
-    </Logger>
-    
-    <!-- Tomcat logging configuration (Default: WARN) -->
-    <Logger name="org.apache.juli.logging" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-
-    <!-- Hibernate logging configuration -->
-    <!-- Production setting: set all to WARN -->
-    <!-- Development settings: -->
-    <!-- org.hibernate=INFO -->
-    <!-- org.hibernate.SQL=DEBUG -->
-    <!-- org.hibernate.orm.jdbc.bind=TRACE -->
-    <!-- org.hibernate.stat=DEBUG -->
-    <!-- org.hibernate.SQL_SLOW=INFO -->
-    <!-- org.hibernate.cache=DEBUG -->
-    <!-- see: https://thorben-janssen.com/hibernate-logging-guide/ -->
-    <Logger name="org.hibernate" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.hibernate.SQL" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.hibernate.engine.transaction" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.hibernate.orm.jdbc.bind" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.hibernate.stat" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.hibernate.SQL_SLOW" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    <Logger name="org.hibernate.cache" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    
-    <!-- Hibernate hikari logging configuration (Default: WARN) -->
-    <Logger name="com.zaxxer.hikari" level="WARN" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-
-    <!-- Flyway logging configuration (Default: WARN) -->
-    <Logger name="org.flywaydb" level="INFO" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>
-    
-    <!-- Ignore Narrowing proxy warning (Dedault: ERROR) -->    
-    <Logger name="org.hibernate.engine.internal.StatefulPersistenceContext" level="ERROR" additivity="false">
-      <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
-    </Logger>  
 
     <Root level="WARN">
       <AppenderRef ref="Console" />
-      <AppenderRef ref="Rolling" />
     </Root>
   </Loggers>
 </Configuration>
