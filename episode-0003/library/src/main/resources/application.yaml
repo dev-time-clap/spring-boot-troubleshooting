@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Demo Bibliothek
+  jpa:
+    show-sql: true
