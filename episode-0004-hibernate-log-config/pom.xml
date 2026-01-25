@@ -12,10 +12,10 @@
   </parent>
 
   <groupId>de.devtime.examples</groupId>
-  <artifactId>library</artifactId>
+  <artifactId>episode-0004-hibernate-log-config</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>Demo Bibliothek</name>
+  <name>episode-0004-hibernate-log-config</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
@@ -25,7 +25,8 @@
     <java-uuid-generator.version>5.2.0</java-uuid-generator.version>
     <springdoc-openapi-starter-webmvc-ui.version>3.0.1</springdoc-openapi-starter-webmvc-ui.version>
   </properties>
-  
+
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -41,7 +42,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  
+
   <dependencies>
     <!-- ===================== -->
     <!-- dev|time dependencies -->
@@ -56,11 +57,19 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-log4j2</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
     </dependency>
 
     <!-- SpringDoc -->
@@ -70,6 +79,7 @@
       <version>${springdoc-openapi-starter-webmvc-ui.version}</version>
     </dependency>
 
+
     <!-- =================== -->
     <!-- Common dependencies -->
     <!-- =================== -->
@@ -77,6 +87,11 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.uuid</groupId>
+      <artifactId>java-uuid-generator</artifactId>
+      <version>${java-uuid-generator.version}</version>
     </dependency>
 
     <!-- ================= -->
