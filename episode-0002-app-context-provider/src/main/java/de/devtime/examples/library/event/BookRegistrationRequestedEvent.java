@@ -29,7 +29,6 @@ public class BookRegistrationRequestedEvent extends ApplicationEvent {
       autowire();
       BookRegistrationRequestedEvent eventToFire = build();
       log.info("A book registration was requested with the following data: {}", eventToFire.getRegistrationData());
-      this.appContext = null;
       this.appContext.publishEvent(eventToFire);
     }
   }
