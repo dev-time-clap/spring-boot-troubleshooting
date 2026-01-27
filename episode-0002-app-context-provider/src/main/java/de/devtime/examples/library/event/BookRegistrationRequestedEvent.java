@@ -1,11 +1,14 @@
 package de.devtime.examples.library.event;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEvent;
 
 import de.devtime.examples.library.api.contract.book.BookRegistrationDto;
+import de.devtime.examples.library.api.impl.BookRestController;
 import de.devtime.examples.library.context.AbstractManualAutowiredBean;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -25,10 +28,13 @@ public class BookRegistrationRequestedEvent extends ApplicationEvent {
   public static class BookRegistrationRequestedEventBuilder
       extends AbstractManualAutowiredBean<BookRegistrationRequestedEventBuilder> {
 
+    @Setter(onMethod_ = @Autowired)
+    private BookRestController controller;
+
     public void fire() {
-      autowire();
       BookRegistrationRequestedEvent eventToFire = build();
       log.info("A book registration was requested with the following data: {}", eventToFire.getRegistrationData());
+      log.info("controller: {}", this.controller);
       this.appContext.publishEvent(eventToFire);
     }
   }
