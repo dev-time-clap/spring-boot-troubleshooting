@@ -14,6 +14,8 @@ Diverse Troubleshooting Themen zu Java, Eclipse und Spring Boot.
 |Spring Boot und log4j2|🧩 [zum Code-Beispiel](https://github.com/dev-time-clap/spring-boot-troubleshooting/tree/main/episode-0003-log4j2)|▶️ [zum Video](https://www.youtube.com/watch?v=I3hbJ4UO5qY&list=PLtIgRse9dGXiOyf0L6AYDQ28mzasnwixA&index=4)|
 |Hibernate und log4j2 Konfigurationen|🧩 [zum Code-Beispiel](https://github.com/dev-time-clap/spring-boot-troubleshooting/tree/main/episode-0004-hibernate-log-config)|▶️ [zum Video](https://www.youtube.com/watch?v=gJMH0i8iVO8&list=PLtIgRse9dGXiOyf0L6AYDQ28mzasnwixA&index=5)|
 |@Autowired richtig nutzen|🧩 [zum Code-Beispiel](https://github.com/dev-time-clap/spring-boot-troubleshooting/tree/main/episode-0005-autowired)|▶️ [zum Video](https://www.youtube.com/watch?v=MXYFumY02SA&list=PLtIgRse9dGXiOyf0L6AYDQ28mzasnwixA&index=6)|
+|H2-Console aktivieren inkl. Spring Boot 4.x|🧩 [zum Code-Beispiel](https://github.com/dev-time-clap/spring-boot-troubleshooting/tree/main/episode-0006-h2-console)|▶️ [zum Video](https://www.youtube.com/watch?v=G3JE55ih93U&list=PLtIgRse9dGXiOyf0L6AYDQ28mzasnwixA&index=7)|
+|@Autowired und @Value richtig nutzen|🧩 [zum Code-Beispiel](https://github.com/dev-time-clap/spring-boot-troubleshooting/tree/main/episode-0007-autowired-and-value)|▶️ in Arbeit|
 
 
 Lust auf mehr hilfreiche Themen?
